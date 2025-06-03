@@ -6,8 +6,11 @@ import Main from './components/Main'
 import Headers from './components/header'
 import Footer from './components/Footer'
 import Login from './components/Login'
+import Authprovides from './Authprovides'
 function App() {
   return (
+    <>
+    <Authprovides>
     <BrowserRouter>
     <Headers />
       <Routes>
@@ -17,6 +20,8 @@ function App() {
       </Routes>
     <Footer />
     </BrowserRouter>
+    </Authprovides>
+    </>
   )
 }
 
