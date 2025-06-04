@@ -3,6 +3,7 @@ import axios from 'axios'
 import { data } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+import { useNavigate } from 'react-router-dom'
 
 const register = () => {
   const [username,setUsername] = useState('')
@@ -11,6 +12,7 @@ const register = () => {
   const [errors,setErrors]=useState('')
   const [success,setSuccess]=useState(false)
   const [loading,setLoading]=useState(false)
+
 
 
   const handleregistration = async (e) => {
@@ -25,6 +27,7 @@ const register = () => {
       console.log("Registration successful");
       setErrors({})
       setSuccess(true)
+  
     }catch(error){
       setErrors(error.response.data)
       console.error("Registration error", error.response.data);

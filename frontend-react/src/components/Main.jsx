@@ -1,7 +1,7 @@
 import React from 'react'
 import Headers from './header'
 import Footer from './Footer'
-import button from './button'
+import Button from './button'
 
 const main = () => {
   return (
@@ -12,7 +12,7 @@ const main = () => {
             <h1 className='text-light'>Stock Prediction Portal</h1>
             <p className='text-light lead'>Welcome to the Stock Prediction Portal, where you can predict stock prices using machine learning models.</p>
             <p className='text-light lead'>To get started, please login or register.</p>
-            <a className='btn btn-outline-warning' href="Login">Login</a>
+            <Button text="Explore Now" class="btn-info" url="/dashboard" />
         </div>
         
     </div>

@@ -12,7 +12,7 @@ const Login = () => {
   const [username,setUsername] = useState('')
   const [password,setpassword]=useState('') 
   const [loading,setLoading]=useState(false)
-  const navigate=useNavigate('')
+  const navigate=useNavigate()
   const [errors,setError]=useState('')
   const {isLoggedIn,setIsLoggedIn}= useContext(AuthContext)
 
@@ -30,7 +30,7 @@ const Login = () => {
       localStorage.setItem('refreshToken',response.data.access)
       console.log("Login successful");
       setIsLoggedIn(true)
-      navigate('/')
+      navigate('/dashboard')
     }catch(error){
       console.error("Invalid Credentials")
       setError('Invalid Credentials')
